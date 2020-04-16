@@ -4,7 +4,7 @@ var MongoClient = require("mongodb").MongoClient;
 MongoClient.connect(url, function (err, db) {
   if (err) throw err;
   var dbop = db.db("mydb");
-  var myquery = { movie: "The Banker"  year: 2020, rating: 8};
+  var myquery = { movie: "The Banker",  year: 2020, rating: 8};
   var newvalues = { $set: { movie: "The Way Back", year: 2020, rating: 9 } };
 
   dbop.collection("myMovies").updateOne(myquery, newvalues, function (err, res) {
