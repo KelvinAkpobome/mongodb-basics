@@ -5,9 +5,9 @@ MongoClient.connect(url, function (err, db) {
   if (err) throw err;
   var dbop = db.db("mydb");
   var myquery = { movie: "The Banker"  year: 2020, rating: 8};
-  var newvalues = { $set: { movie: "The Grudge", year: 2020, rating: 9 } };
+  var newvalues = { $set: { movie: "The Way Back", year: 2020, rating: 9 } };
 
-  dbop.collection("myMovies").updateOne(oldMovie, newMovie, function (err, res) {
+  dbop.collection("myMovies").updateOne(myquery, newvalues, function (err, res) {
     if (err) throw err;
 
     dbo.collection("myMovies").find({}).toArray(function (err, result) {
