@@ -5,7 +5,7 @@ MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbop = db.db("kelvinakpobome1");
   var myobj = [
-    {movie: "The Banker", year: "2020", rating: 8}
+    {movie: "The Banker", year: "2020", rating: 8},
     {movie: "Bad Boys", year: "2020", rating: 7}, 
     {movie: "The Hunt", year: "2020", rating: 7},
     {movie: "Bloodshot", year: "2020", rating: 7.5},
